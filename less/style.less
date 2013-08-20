@@ -1,0 +1,191 @@
+@mahogany: #3a2219;
+@gold: #e9c66D;
+@cream: @gold + #3f3f3f;
+@link-color: #990016;
+@maroon: @link-color - #222;
+@font-family-base: 'Helvetica Neue', Helvetica, sans-serif;
+@special-font: 'Caudex', @font-family-base;
+@tagline-font: 'Homemade Apple', @special-font;
+@font-size-base: 12pt;
+
+body {
+    color: @mahogany;
+    font-size: @font-size-base;
+    font-family: @font-family-base;
+    background: #f9f9f9;
+}
+
+a {
+    color: @link-color;
+    &:hover {
+        color: @link-color + #602;
+    }
+}
+
+h2, h3, .nav {
+    font-family: @special-font;
+}
+
+h1 {
+    font-size: 3.2em
+}
+
+h2 {
+    font-size: 2.2em;
+}
+
+h3 {
+    font-size: 1.6em;
+    font-weight: 700;
+}
+
+.btn {
+    margin-bottom: 5px;
+}
+
+.btn-primary {
+    background: @link-color;
+    border-color: @link-color - #111;
+    border-bottom-color: @link-color - #222;
+    &:hover {
+        background: @link-color - #111;
+        border-color: @link-color - #222;
+        border-top-color: @link-color - #333;
+    }
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.nav {
+    background-color: @maroon;
+    font-size: 1.3em;
+    min-height: 70px;
+    padding: 0;
+    margin: 0;
+
+    a {
+        float: left;
+        display: block;
+        padding: 20px 15px 0 15px;
+        height: 70px;
+        color: @gold;
+        text-shadow: -1px -1px 2px @maroon - #222;
+        &:hover {
+            color: @cream;
+            text-decoration: none;
+            background: @maroon - #050505;
+            text-shadow: -1px -1px 2px @maroon;
+        }
+    &.logo {
+        float: left;
+        margin-left: -15px;
+        padding: 0;
+
+        &.visible-sm {
+            margin-left: 0;
+        }
+    }
+        img {
+            height: 70px;
+            padding: 0;
+        }
+    }
+    .visible-md a, &.visible-sm a {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .visible-md {
+        font-size: .8em;
+        a.logo {
+            padding: 0;
+        }
+    }
+}
+
+.splash {
+    padding: 0;
+    background-color: #ddd;
+
+    .col-12 {
+        padding: 0;
+    }
+
+    img {
+        width: 100%;
+        min-height: 300px;
+        color: grey;
+    }
+
+    h2 {
+        font-size: 2.2em;
+        font-style: italic;
+        font-weight: 400;
+        word-spacing: .3em;
+        font-family: @tagline-font;
+        //text-shadow: 1px 1px 0 @mahogany - #111;
+        position: absolute;
+        line-height: 1.5em;
+        top: 0;
+        right: 0;
+        margin: 0;
+        text-align: right;
+        padding: 15px 10px 20px 10px;
+        background: rgba(255,255,255,.45);
+        border-bottom-left-radius: 10px;
+        border: none;
+
+        &.visible-md {
+            font-size: 1.8em;
+        }
+
+        &.visible-sm {
+            padding: 10px 5px;
+            font-size: 1.5em;
+        }
+    }
+}
+
+.details {
+
+    .btn {
+        margin: 20px 0 0 0;
+        &.btn-large {
+            padding: 20px 0;
+        }
+    }
+
+    .col-sm-6 .btn {
+        display: block;
+        width: 100%;
+        margin: 10px 10px 0 0;
+    }  
+}
+
+.announcements {
+    background-color: white;
+    border-radius: 10px;
+    padding-bottom: 20px;
+    min-height: 8em;
+} 
+
+.footer {
+    background: @maroon;
+    color: @cream;
+    margin-top: 30px;
+    padding: 20px 0;
+    font-size: 1em;
+
+    a {
+        color: @gold;
+        &:hover {
+            color: @cream;
+        };
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+}

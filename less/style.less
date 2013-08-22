@@ -13,11 +13,25 @@
 @tripadvisor: #10703f;
 @facebook: #edf0f5;
 
+.rounded-corners (@radius: 5px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.classy-border (@color: #dfdfd0, @diff: #111) {
+  background-color: @color;
+  border: 1pt solid @color - @diff;
+  border-bottom: 1pt solid @color - (@diff + #111);
+}
+
 body {
     color: @mahogany;
     font-size: @font-size-base;
     font-family: @font-family-base;
-    background: #f7f7f7;
+    background: #f6f6df;
 }
 
 a {
@@ -27,7 +41,7 @@ a {
     }
 }
 
-h2, h3, .nav, .btn {
+h2, h3, .nav, .btn, .social-media {
     font-family: @special-font;
     font-weight: 400;
 }
@@ -37,32 +51,36 @@ h1 {
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 1.8em;
 }
 
 h3 {
-    font-size: 1.6em;
+    font-size: 1.4em;
     font-weight: 700;
 }
 
 .btn {
     margin-bottom: 5px;
-    font-size: 1.4em;
+    font-size: 1.2em;
     font-weight: 300;
+    .classy-border (@cream - #111, #222);
     &:hover {
-        background: @link-color;
+        .classy-border (@cream, #222);
+        color: inherit;
     }
 }
 
+.btn-large {
+    font-size: 1.4em;
+    font-weight: 400;
+}
+
 .btn-primary {
-    background: @link-color - #333;
-    border-color: @link-color - #444;
-    border-top-color: @link-color - #555;
-    letter-spacing: 1px;
+    .classy-border(@link-color - #333);
+    width: 100%;
     &:hover {
-        background: @link-color;
-        border-color: @link-color - #111;
-        border-bottom-color: @link-color - #222;
+        .classy-border(@link-color);
+        color: white;
     }
 }
 
@@ -72,16 +90,17 @@ h3 {
 
 .nav {
     background-color: @maroon;
-    font-size: 1.3em;
-    min-height: 70px;
+    font-size: 1.2em;
+    min-height: 65px;
     padding: 0;
     margin: 0;
+    border-bottom: 1pt solid @maroon - #111;
 
     a {
         float: left;
         display: block;
         padding: 25px 15px 0 15px;
-        height: 70px;
+        height: 65px;
         color: @gold;
         text-shadow: -1px -1px 2px @maroon - #222;
         &:hover {
@@ -101,7 +120,7 @@ h3 {
     }
         img {
             height: 65px;
-            padding: 2px 10px 8px 5px;
+            padding: 2px 20px 8px 10px;
         }
     }
     .visible-md a, &.visible-sm a {
@@ -109,7 +128,7 @@ h3 {
         padding-right: 10px;
     }
     .visible-md {
-        font-size: .8em;
+        font-size: .9em;
         a.logo {
             padding: 0;
         }
@@ -118,10 +137,14 @@ h3 {
 
 .splash {
     padding: 0;
-    background-color: #ddd;
+    background-color: #dfdfd6;
 
     .col-12 {
         padding: 0;
+        height: 280px;
+        background-image: url('http://placekitten.com/1200/280');
+        background-position: 0 0;
+        background-repeat: no-repeat;
     }
 
     img {
@@ -172,30 +195,51 @@ h3 {
     .col-sm-6 .btn {
         display: block;
         width: 100%;
-        margin: 10px 10px 0 0;
+        margin: 10px 0 0 0;
     }  
 }
 
 .highlight { 
     background-color: white;
     border-radius: 10px;
-    padding-bottom: 20px;
+    margin-left: -15px;
+    padding: 1px 15px 20px 15px;
+    border: 1pt solid #dfdfd0;
+    margin-top: 10px;
 }
 
 .announcements {
     min-height: 8em;
     padding-bottom: 20px;
-} 
+}
+
+.mailing-list {
+    input {
+        height: 2em;
+        margin-bottom: 10px;
+    }
+    .btn {
+        font-size: 1em;
+        margin-bottom: 1px;
+        font-weight: 400;
+    }
+}
+
+.helptext {
+    font-size: .9em;
+    color: @mahogany + #444;
+}
 
 .social-media {
-    background: white;
     min-height: 80px;
     margin: 0 0 5px 0;
-    padding: 10px 5px;
+    padding: 8px 5px;
     border-radius: 10px;
-    font-size: 1.2em;
+    font-size: 1.1em;
     color: inherit;
-    border: 1pt solid #ddd;
+
+    .classy-border(white);
+
     img {
         float: left;
         padding: 2px 20px 2px 5px;
@@ -207,42 +251,42 @@ h3 {
         margin-top: 5px;
     }
     &.urbanspoon, &.urbanspoon:hover {
-        background: @urbanspoon;
+        .classy-border(@urbanspoon);
         color: gold;
         img {
             padding-top: 10px;
         }
         &:hover {
-            background: @urbanspoon - #111;
+            .classy-border(@urbanspoon - #111);
         }
     }
     &.twitter, &.twitter:hover {
-        background: @twitter;
+        .classy-border(@twitter);
         color: white;
         &:hover {
-            background: @twitter - #111;
+            .classy-border(@twitter - #111);
         }
     }
 
     &.facebook, &.facebook:hover {
         color: #333;
-        background: @facebook;
+        .classy-border(@facebook);
         &:hover {
-            background: @facebook - #111;
+            .classy-border(@facebook - #111);
         }
     }
     &.yelp, &.yelp:hover {
         color: #bf311a;
-        background: #ddd;
+        .classy-border(@cream, #222);
         &:hover {
-            background: #cacaca;
+            .classy-border(@cream - #111, #222);
         }
     }
     &.tripadvisor, &.tripadvisor:hover {
-        background: @tripadvisor;
+        .classy-border(@tripadvisor);
         color: white;
         &:hover {
-            background: @tripadvisor - #111;
+            .classy-border(@tripadvisor - #111);
         }
     }
     &:hover {
@@ -257,6 +301,7 @@ h3 {
     margin-top: 30px;
     padding: 20px 0;
     font-size: 1em;
+    border-top: 1pt solid @maroon + #222;
 
     a {
         color: @gold;

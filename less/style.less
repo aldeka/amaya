@@ -39,10 +39,6 @@ a {
     &:hover {
         color: @link-color + #602;
     }
-
-    button, &:hover button; {
-        color: inherit;
-    }
 }
 
 h2, h3, .nav, .btn, .social-media {
@@ -63,7 +59,7 @@ h3 {
     font-weight: 700;
 }
 
-.btn {
+.btn, a .btn {
     margin-bottom: 5px;
     font-size: 1.2em;
     font-weight: 300;
@@ -74,12 +70,12 @@ h3 {
     }
 }
 
-.btn-large {
+.btn-large, a .btn-large {
     font-size: 1.4em;
     font-weight: 400;
 }
 
-.btn-primary {
+.btn-primary, a .btn-primary {
     .classy-border(@link-color - #333);
     width: 100%;
     &:hover {

@@ -41,25 +41,25 @@
                     <div class="visible-lg">
                         <a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.png"></a>
                         <a class="home-link" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">Home</a>
-                        <a href="<?php echo get_template_directory_uri(); ?>/menu/">Menu</a>
-                        <a href="<?php echo get_template_directory_uri(); ?>/reservations/">Reservations</a>
-                        <a href="<?php echo get_template_directory_uri(); ?>/takeout/">Takeout</a>
-                        <a href="<?php echo get_template_directory_uri(); ?>/catering/">Catering</a>
-                        <a href="<?php echo get_template_directory_uri(); ?>/about-us/">About Us</a>
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>/menu/">Menu</a>
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>/reservations/">Reservations</a>
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>/takeout/">Takeout</a>
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>/catering/">Catering</a>
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>/about-us/">About Us</a>
                     </div>
                     <div class="visible-md">
                         <a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.png"></a>
-                        <a href="<?php echo get_template_directory_uri(); ?>/menu/">Menu</a>
-                        <a href="<?php echo get_template_directory_uri(); ?>/reservations/">Reservations</a>
-                        <a href="<?php echo get_template_directory_uri(); ?>/takeout/">Takeout</a>
-                        <a href="<?php echo get_template_directory_uri(); ?>/catering/">Catering</a>
-                        <a href="<?php echo get_template_directory_uri(); ?>/about-us/">About Us</a>
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>/menu/">Menu</a>
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>/reservations/">Reservations</a>
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>/takeout/">Takeout</a>
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>/catering/">Catering</a>
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>/about-us/">About Us</a>
                     </div>
                     <div class="visible-sm">
                         <a class="logo" style="margin: 0;" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.png"></a>
-                        <a href="<?php echo get_template_directory_uri(); ?>/menu/">Menu</a>
-                        <a href="<?php echo get_template_directory_uri(); ?>/reservations/">Reservations</a>
-                        <a href="<?php echo get_template_directory_uri(); ?>/takeout/">Takeout</a>
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>/menu/">Menu</a>
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>/reservations/">Reservations</a>
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>/takeout/">Takeout</a>
                     </div>
                     <!-- <h3 class="menu-toggle"><?php _e( 'Menu', 'twentythirteen' ); ?></h3> -->
             </div>

@@ -15,7 +15,7 @@ get_header(); ?>
 
 			<?php /* The loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
-				<div class="section row">
+				<div class="singleton section row">
 	              <div class="col-lg-12 col-sm-12">
 	                <div id="post-<?php the_ID(); ?>" class="highlight">
 		                <h2><?php the_title(); ?></h2>

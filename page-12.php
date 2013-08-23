@@ -23,9 +23,9 @@ get_header(); ?>
             <div class="section row details">
               <div class="col-lg-4 col-sm-12">
                 <p>
-                    <span class="col-sm-12 col-lg-12"><a href="<?php echo esc_url( home_url( '/' ) ); ?>/menu/"><button class="btn btn-large">View menu</button></a></span>
-                    <span class="col-sm-6 col-lg-12"><a href="<?php echo esc_url( home_url( '/' ) ); ?>/reservations/"><button class="btn btn-large btn-primary">Make a reservation</button></a></span>
-                    <span class="col-sm-6 col-lg-12"><a href="<?php echo esc_url( home_url( '/' ) ); ?>/takeout/"><button class="btn btn-large btn-primary">Order takeout</button></a></span>
+                    <span class="col-sm-12 col-lg-12"><a href="<?php echo esc_url( home_url( '/' ) ); ?>menu/"><button class="btn btn-large">View menu</button></a></span>
+                    <span class="col-sm-6 col-lg-12"><a href="<?php echo esc_url( home_url( '/' ) ); ?>reservations/"><button class="btn btn-large btn-primary">Make a reservation</button></a></span>
+                    <span class="col-sm-6 col-lg-12"><a href="<?php echo esc_url( home_url( '/' ) ); ?>takeout/"><button class="btn btn-large btn-primary">Order takeout</button></a></span>
                 </p>
               </div>
               <div class="col-lg-4 col-lg-push-4 col-sm-6 col-6">

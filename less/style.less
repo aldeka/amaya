@@ -63,16 +63,22 @@ h3 {
     margin-bottom: 5px;
     font-size: 1.2em;
     font-weight: 300;
+    text-decoration: none;
+    color: inherit;
+
     .classy-border (@gold - #111);
     &:hover {
         .classy-border (@gold);
         color: inherit;
+        text-decoration: none;
+
     }
 }
 
 .btn-large, a .btn-large {
     font-size: 1.4em;
     font-weight: 400;
+
 }
 
 .btn-primary, a .btn-primary {
@@ -81,6 +87,7 @@ h3 {
     &:hover {
         .classy-border(@link-color);
         color: white;
+        text-decoration: none;
     }
 }
 

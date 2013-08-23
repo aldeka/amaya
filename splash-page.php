@@ -1,52 +1,23 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Amaya Bar and Grill</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap -->
-    <link href="/dependencies/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,700|Homemade+Apple' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet/less" type="text/css" href="/less/style.less" />
-    <script src="/dependencies/js/less.min.js"></script>
-  </head>
-  <body>
-    <div class="nav">
-        <div class="nav-flowers">
-            <div class="container">
-                    <div class="visible-lg">
-                        <a href="/" class="logo"><img src="/img/logo.png"></a>
-                        <a href="/">Home</a>
-                        <a href="">Menu</a>
-                        <a href="">Reservations</a>
-                        <a href="">Takeout</a>
-                        <a href="">Catering</a>
-                        <a href="">About Us</a>
-                    </div>
-                    <div class="visible-md">
-                        <a href="/" class="logo"><img src="/img/logo.png"></a>
-                        <a href="">Menu</a>
-                        <a href="">Reservations</a>
-                        <a href="">Takeout</a>
-                        <a href="">Catering</a>
-                        <a href="">About Us</a>
-                    </div>
-                    <div class="visible-sm">
-                        <a href="/" class="logo" style="margin: 0;"><img src="/img/logo.png"></a>
-                        <a href="">Menu</a>
-                        <a href="">Reservations</a>
-                        <a href="">Takeout</a>
-                    </div>
-            </div>
-        </div>
-        <div class="clearfix"></div>
-    </div>
-    <div class="falling-flowers">
-        <div class="container">
+<?php
+/**
+ * The template for displaying all pages.
+ *
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages and that other
+ * 'pages' on your WordPress site will use a different template.
+ *
+ * @package WordPress
+ * @subpackage Twenty_Thirteen
+ * @since Twenty Thirteen 1.0
+ */
+
+get_header(); ?>
+
             <div class="row section splash">
                 <div class="col-lg-12 col-12">
-                    <h2 class="visible-lg">Contemporary gourmet Indian cuisine</h2>
-                    <h2 class="visible-md">Contemporary gourmet Indian cuisine</h2>
-                    <h2 class="visible-sm">Contemporary gourmet Indian cuisine</h2>
+                    <h2 class="visible-lg"><?php bloginfo( 'description' ); ?></h2>
+                    <h2 class="visible-md"><?php bloginfo( 'description' ); ?></h2>
+                    <h2 class="visible-sm"><?php bloginfo( 'description' ); ?></h2>
                 </div>
             </div>
             <div class="section row details">
@@ -80,14 +51,19 @@
                 </div>
               </div>
             </div>
+
             <div class="section row">
               <div class="announcements col-lg-12 col-sm-12">
                 <div class="highlight">
                 <h2>Announcements</h2>
-                <p>Amaya will resume Sunday Brunch on September 8th.</p>
+                <?php /* The loop */ ?>
+                <?php while ( have_posts() ) : the_post(); ?>
+                    <?php the_content(); ?>
+                <?php endwhile; ?>
                 </div>
               </div>
             </div>
+
             <div class="section row promotions">
                 <div class="col-lg-12">
                     <div class="highlight">
@@ -97,12 +73,11 @@
                                 <img class="img-responsive" src="http://placekitten.com/600/400">
                             </div>
                             <div class="col-lg-8 col-sm-6">
-                                <h3>Amaya offers catering!</h3>
-                                <p>Make your next event an unforgettable one. Amaya Bar and Grill's catering service offers an array of our finest dishes representing north and south Indian cuisine with a modern twist.</p>
-                                <p>Amaya specializes in catering events from 20-500 people. We serve any occasion: weddings, birthday parties, private company dinners, or family reunions. We can cater to any set of dietary restrictions, food allergies, or cultural preferences.</p>
-                                <p>Let Amaya Bar and Grill serve at your next event!</p>
-
-                                <p><button class="btn">Contact us</button></p>
+                                <?php /* The loop */ ?>
+                                <?php while ( have_posts() ) : the_post(); ?>
+                                    <h3><?php the_title(); ?></h3>
+                                    <?php the_content(); ?>
+                                <?php endwhile; ?>
                             </div>
                         </div>
                     </div>
@@ -158,51 +133,7 @@
                  <br>
               </div>
             </div>
-        </div>
-        <!-- End main container -->
-    </div>
-    <!-- End falling-flowers -->
 
-    <div class="footer">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-4 col-4">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="">Menu &ndash; Lunch</a></li>
-                    <li><a href="">Menu &ndash; Dinner</a></li>
-                    <li><a href="">Events and Specials</a></li>
-                </ul>
-              </div>
 
-              <div class="col-lg-4 col-4">
-                <ul>
-                    <li><a href="">Make a Reservation</a></li>
-                    <li><a href="">Order Takeout</a></li>
-                    <li><a href="">Catering Service</a></li>
-                </ul>
-              </div>
-
-              <div class="col-lg-4 col-4">
-                <ul>
-                    <li><a href="">Location</a></li>
-                    <li><a href="">Hours</a></li>
-                    <!-- <li>Press</li> -->
-                    <li><a href="">About Us</a></li>
-                    <li><a href="">Contact Us</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="copyright col-lg-4 col-lg-offset-8"><br>&copy; 2012 &ndash; <script>document.write(new Date().getFullYear())</script><noscript>2013</noscript> Amaya Bar and Grill<br>Rochester, NY Indian Cuisine</div>
-          </div>
-    </div>
-
-    <!-- JavaScript plugins (requires jQuery) -->
-    <script src="/dependencies/js/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="/dependencies/js/bootstrap.min.js"></script>
-
-    <!-- Optionally enable responsive features in IE8. Respond.js can be obtained from https://github.com/scottjehl/Respond -->
-    <script src="/dependencies/js/respond.js"></script>
-  </body>
-</html>
+<?php get_sidebar(); ?>
+<?php get_footer(); ?>

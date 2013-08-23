@@ -56,10 +56,14 @@ get_header(); ?>
               <div class="announcements col-lg-12 col-sm-12">
                 <div class="highlight">
                 <h2>Announcements</h2>
-                <?php /* The loop */ ?>
-                <?php while ( have_posts() ) : the_post(); ?>
+                <?php
+                $args = array( 'posts_per_page' => 1 );
+                $lastposts = get_posts( $args );
+                foreach ( $lastposts as $post ) :
+                  setup_postdata( $post ); ?>
                     <?php the_content(); ?>
-                <?php endwhile; ?>
+                <?php endforeach; 
+                wp_reset_postdata(); ?>
                 </div>
               </div>
             </div>

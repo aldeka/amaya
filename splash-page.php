@@ -89,23 +89,23 @@ get_header(); ?>
 
               <div class="col-sm-6 col-lg-4 col-lg-push-8">
                 <a class="col-12 social-media facebook">
-                    <img src="/img/fb.png" class="img-responsive"/>
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/fb.png" class="img-responsive"/>
                     <span>Like Amaya on Facebook</span>
                 </a>
                 <a class="col-12 social-media twitter">
-                    <img src="/img/twitter.png" class="img-responsive"/>
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/twitter.png" class="img-responsive"/>
                     <span>Follow Amaya on Twitter</span>
                 </a>
                 <a class="col-12 social-media yelp">
-                    <img src="/img/yelp.png" class="img-responsive"/>
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/yelp.png" class="img-responsive"/>
                     <span>Review Amaya on Yelp</span>
                 </a>
                 <a class="col-12 social-media urbanspoon">
-                    <img src="/img/urbanspoon.png" width="90" class="img-responsive"/>
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/urbanspoon.png" width="90" class="img-responsive"/>
                     <span>Review Amaya on Urbanspoon</span>
                 </a>
                 <a class="col-12 social-media tripadvisor">
-                    <img src="/img/tripadvisor.png" width="90" class="img-responsive"/>
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/tripadvisor.png" width="90" class="img-responsive"/>
                     <span>Review Amaya on Tripadvisor</span>
                 </a>
                 <div class="clearer">&nbsp;</div>

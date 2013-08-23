@@ -39,7 +39,7 @@
         <div class="nav-flowers">
             <div class="container">
                     <div class="visible-lg">
-                        <a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="/img/logo.png"></a>
+                        <a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.png"></a>
                         <a class="home-link" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">Home</a>
                         <a href="">Menu</a>
                         <a href="">Reservations</a>
@@ -56,7 +56,7 @@
                         <a href="">About Us</a>
                     </div>
                     <div class="visible-sm">
-                        <a href="/" class="logo" style="margin: 0;"><img src="/img/logo.png"></a>
+                        <a href="/" class="logo" style="margin: 0;"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.png"></a>
                         <a href="">Menu</a>
                         <a href="">Reservations</a>
                         <a href="">Takeout</a>

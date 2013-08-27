@@ -18,28 +18,28 @@
             <div class="row">
               <div class="col-lg-4 col-4">
                 <ul>
-                    <li><a href="<?php echo get_template_directory_uri(); ?>">Home</a></li>
-                    <li><a href="<?php echo get_template_directory_uri(); ?>menu/#lunch">Menu &ndash; Lunch</a></li>
-                    <li><a href="<?php echo get_template_directory_uri(); ?>menu/#dinner">Menu &ndash; Dinner</a></li>
-                    <li><a href="<?php echo get_template_directory_uri(); ?>events/">Events and Specials</a></li>
+                    <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a></li>
+                    <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>menu/#lunch">Menu &ndash; Lunch</a></li>
+                    <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>menu/#dinner">Menu &ndash; Dinner</a></li>
+                    <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>events/">Events and Specials</a></li>
                 </ul>
               </div>
 
               <div class="col-lg-4 col-4">
                 <ul>
-                    <li><a href="<?php echo get_template_directory_uri(); ?>reservations/">Make a Reservation</a></li>
-                    <li><a href="<?php echo get_template_directory_uri(); ?>takeout/">Order Takeout</a></li>
-                    <li><a href="<?php echo get_template_directory_uri(); ?>catering/">Catering Service</a></li>
+                    <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>reservations/">Make a Reservation</a></li>
+                    <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>takeout/">Order Takeout</a></li>
+                    <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>catering/">Catering Service</a></li>
                 </ul>
               </div>
 
               <div class="col-lg-4 col-4">
                 <ul>
-                	<li><a href="<?php echo get_template_directory_uri(); ?>about-us/">About Us</a></li>
-                    <li><a href="<?php echo get_template_directory_uri(); ?>about-us/#location">Location</a></li>
-                    <li><a href="<?php echo get_template_directory_uri(); ?>about-us/#hours">Hours</a></li>
+                	<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>about-us/">About Us</a></li>
+                    <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>about-us/#location">Location</a></li>
+                    <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>about-us/#hours">Hours</a></li>
                     <!-- <li>Press</li> -->
-                    <li><a href="<?php echo get_template_directory_uri(); ?>about-us/#contact">Contact Us</a></li>
+                    <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>about-us/#contact">Contact Us</a></li>
                 </ul>
               </div>
             </div>

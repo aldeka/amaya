@@ -39,13 +39,13 @@
         <div class="nav-flowers">
             <div class="container">
                     <div class="visible-lg">
-                        <?php include 'nav-lg.php' ?>
+                        <?php include 'nav/nav-lg.php' ?>
                     </div>
                     <div class="visible-md">
-                        <?php include 'nav-md.php' ?>
+                        <?php include 'nav/nav-md.php' ?>
                     </div>
                     <div class="visible-sm">
-                        <?php include 'nav-sm.php' ?>
+                        <?php include 'nav/nav-sm.php' ?>
                     </div>
             </div>
         </div>

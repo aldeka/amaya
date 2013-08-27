@@ -31,14 +31,14 @@ get_header(); ?>
               <div class="col-lg-4 col-lg-push-4 col-sm-6 col-6">
                 <div class="highlight">
                 <h3>Hours</h3>
-                <?php include 'hours.php'; ?>
+                <?php include 'home_page/hours.php'; ?>
                 </div>
 
               </div>
               <div class="col-lg-4 col-lg-pull-4 col-sm-6 col-6">
                 <div class="highlight">
                 <h3>Address</h3>
-                <?php include 'address.php'; ?>
+                <?php include 'home_page/address.php'; ?>
                 </div>
               </div>
             </div>
@@ -80,22 +80,20 @@ get_header(); ?>
             <div class="section row">
 
               <div class="col-sm-6 col-lg-4 col-lg-push-8">
-                <?php include 'socialmedia.php'; ?>
+                <?php include 'home_page/socialmedia.php'; ?>
                 <div class="clearer">&nbsp;</div>
               </div>
 
               <div class="col-sm-6 col-lg-4 col-lg-pull-4">
                 <h3>Upcoming Events</h3>
-                <?php include 'calendar.php'; ?>
+                <?php include 'home_page/calendar.php'; ?>
                 <br>
               </div>
               <div class="mailing-list col-sm-12 col-lg-4 col-lg-pull-4">
                 <h3>Join our mailing list!</h3>
-                <?php include 'mailinglist.php'; ?>
+                <?php include 'home_page/mailinglist.php'; ?>
                  <br>
               </div>
             </div>
 
-
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

@@ -19,8 +19,8 @@
               <div class="col-lg-4 col-4">
                 <ul>
                     <li><a href="<?php echo get_template_directory_uri(); ?>">Home</a></li>
-                    <li><a href="<?php echo get_template_directory_uri(); ?>menu/lunch/">Menu &ndash; Lunch</a></li>
-                    <li><a href="<?php echo get_template_directory_uri(); ?>menu/dinner/">Menu &ndash; Dinner</a></li>
+                    <li><a href="<?php echo get_template_directory_uri(); ?>menu/#lunch">Menu &ndash; Lunch</a></li>
+                    <li><a href="<?php echo get_template_directory_uri(); ?>menu/#dinner">Menu &ndash; Dinner</a></li>
                     <li><a href="<?php echo get_template_directory_uri(); ?>events/">Events and Specials</a></li>
                 </ul>
               </div>

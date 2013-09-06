@@ -77,11 +77,10 @@ get_header(); ?>
             </div>
             <br>
 
-            <div class="section row">
+            <div class="row">
 
               <div class="col-sm-6 col-lg-4 col-lg-push-8">
                 <?php include 'home_page/socialmedia.php'; ?>
-                <div class="clearer">&nbsp;</div>
               </div>
 
               <div class="col-sm-6 col-lg-4 col-lg-pull-4">

@@ -25,7 +25,17 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
     <!-- Bootstrap -->
     <link href="<?php echo get_template_directory_uri(); ?>/dependencies/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,700|Homemade+Apple' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,700' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+        @font-face {
+          font-family: "Aardvark Cafe";
+          src: url("<?php echo get_template_directory_uri(); ?>/fonts/aardvark_cafe-webfont.ttf"),
+          url("<?php echo get_template_directory_uri(); ?>/fonts/aardvark_cafe-webfont.svg"),
+          url("<?php echo get_template_directory_uri(); ?>/fonts/aardvark_cafe-webfont.woff"),
+          url("<?php echo get_template_directory_uri(); ?>/fonts/aardvark_cafe-webfont.eot");
+          font-weight: 400;
+        }
+    </style>
     <link rel="stylesheet/less" type="text/css" href="<?php echo get_template_directory_uri(); ?>/less/style.less" />
     <script src="<?php echo get_template_directory_uri(); ?>/dependencies/js/less.min.js"></script>
 	<!--[if lt IE 9]>

@@ -59,7 +59,7 @@ get_header(); ?>
               </div>
             </div>
 
-            <div class="section row promotions">
+            <div id="promotions" class="section row promotions">
                 <div class="col-lg-12">
                     <div class="highlight">
                         <h2>Promotions</h2>

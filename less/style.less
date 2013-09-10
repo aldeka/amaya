@@ -3,6 +3,7 @@
 @cream: @gold + #3f3f3f;
 @link-color: #990016;
 @maroon: @link-color - #333;
+@border-color: #dfdfd0;
 @font-family-base: Geneva, Arial, 'Helvetica Neue', Helvetica, sans-serif;
 @special-font: 'Merriweather', @font-family-base;
 @tagline-font: 'Aardvark Cafe', @special-font;
@@ -116,12 +117,6 @@ a:hover .btn {
     margin: 0;
     border-bottom: 1pt solid @maroon - #111;
 
-    .nav-flowers {
-        background-image: url('../img/flowers-right.png');
-        background-position: top right;
-        background-repeat: no-repeat;
-    }
-
     a {
         float: left;
         display: block;
@@ -171,19 +166,32 @@ a:hover .btn {
     background: url('../img/falling-flowers.png') repeat-x;
 }
 
+@media screen and (max-width: 768px) {
+    .splash img {
+        height: 250px;
+        margin-left: -100px;
+    }
+    
+    .splash .col-12 {
+        height: 250px;
+        margin-bottom: -50px;
+    }
+}
+
 .splash {
     padding: 0;
-    background-color: #dfdfd6;
+    background-color: white;
+    border: 1pt solid @border-color;
+    border-top: none;
 
     .col-12 {
         padding: 0;
         height: 300px;
-        background-image: url('../img/interior.jpg');
-        background-position: 0 0;
-        background-repeat: no-repeat;
+        overflow: hidden;
     }
 
     h2 {
+        z-index: 1000;
         font-size: 2.8em;
         font-weight: 400;
         word-spacing: .2em;
@@ -209,17 +217,13 @@ a:hover .btn {
 .details {
 
     .btn {
-        margin: 20px 0 0 0;
+        display: block;
+        width: 100%;
+        margin: 10px 0 0 0;
         &.btn-large {
             padding: 20px 0;
         }
     }
-
-    .btn {
-        display: block;
-        width: 100%;
-        margin: 10px 0 0 0;
-    }  
 }
 
 .highlight { 
@@ -227,7 +231,7 @@ a:hover .btn {
     border-radius: 10px;
     margin-left: -15px;
     padding: 1px 15px 20px 15px;
-    border: 1pt solid #dfdfd0;
+    border: 1pt solid @border-color;
     margin-top: 10px;
 }
 

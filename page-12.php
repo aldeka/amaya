@@ -14,7 +14,17 @@
 get_header(); ?>
 
             <div class="row section splash">
-                <div class="col-lg-12 col-12">
+                <div class="col-lg-12 col-12 splash-images">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/splash/interior.jpg"/>
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/splash/chicken.jpg"/>
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/splash/anise.jpg"/>
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/splash/red-drink.jpg"/>
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/splash/salad.jpg"/>
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/splash/lounge.jpg"/>
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/splash/wine.jpg"/>
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/splash/rice.jpg"/>
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/splash/watermelon.png"/>
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/splash/blue-drink.jpg"/>
                     <h2 class="visible-lg"><?php bloginfo( 'description' ); ?></h2>
                     <h2 class="visible-md"><?php bloginfo( 'description' ); ?></h2>
                     <h2 class="visible-sm"><?php bloginfo( 'description' ); ?></h2>
@@ -94,5 +104,28 @@ get_header(); ?>
                  <br>
               </div>
             </div>
+            
+<script src="<?php echo get_template_directory_uri(); ?>/dependencies/js/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.splash-images img').hide();
+        PIC_COUNT = $('.splash-images img').length;
+        CURRENT_PIC = 0;
+        $($('.splash-images img')[CURRENT_PIC]).show();
+
+        var picSwitch = function(){;
+            var pics = $('.splash-images img');
+            $(pics[CURRENT_PIC]).fadeOut(400, function() {
+                CURRENT_PIC++;
+                if (CURRENT_PIC >= PIC_COUNT) {
+                    CURRENT_PIC = 0;
+                }
+                $(pics[CURRENT_PIC]).fadeIn(600);
+            });
+        };
+
+        var picSwitcher = window.setInterval(picSwitch, 6000);
+    });
+</script>
 
 <?php get_footer(); ?>

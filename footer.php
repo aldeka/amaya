@@ -19,16 +19,10 @@
               <div class="col-lg-4 col-4">
                 <ul>
                     <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a></li>
-                    <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>menu/#lunch">Menu &ndash; Lunch</a></li>
-                    <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>menu/#dinner">Menu &ndash; Dinner</a></li>
-                    <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>events/">Events and Specials</a></li>
-                </ul>
-              </div>
-
-              <div class="col-lg-4 col-4">
-                <ul>
+                    <li><a href="http://www.orderstart.com/amayabarandgrill">Menu</a></li>
+                    <!--<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>events/">Events and Specials</a></li>-->
                     <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>reservations/">Make a Reservation</a></li>
-                    <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>takeout/">Order Takeout</a></li>
+                    <li><a href="http://www.orderstart.com/amayabarandgrill">Order Takeout</a></li>
                     <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>catering/">Catering Service</a></li>
                 </ul>
               </div>
@@ -42,24 +36,20 @@
                     <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>about-us/#contact">Contact Us</a></li>
                 </ul>
               </div>
-            </div>
-            <div class="copyright col-lg-4 col-lg-offset-8">
-            	<br>
-            	<p>&copy; 2012 &ndash; <script>document.write(new Date().getFullYear())</script><noscript>2013</noscript> Amaya Bar and Grill<br>Rochester, NY Indian Cuisine</p>
-            	<?php do_action( 'twentythirteen_credits' ); ?>
-				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'twentythirteen' ) ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'twentythirteen' ); ?>"><?php printf( __( 'Proudly powered by %s', 'twentythirteen' ), 'WordPress' ); ?></a>
+                <div class="col-lg-4 col-4">
+                	<p>&copy; 2012 &ndash; <script>document.write(new Date().getFullYear())</script><noscript>2013</noscript> Amaya Bar and Grill<br>
+                        Rochester, NY Indian Cuisine<br>
+                        Serving lunch and dinner six days a week<br><br>
+                        585-241-3223</p>
+                </div>
             </div>
           </div>
     </div>
 
     <!-- JavaScript plugins (requires jQuery) -->
-    <script src="/dependencies/js/jquery.min.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/dependencies/js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="/dependencies/js/bootstrap.min.js"></script>
-
-    <!-- Optionally enable responsive features in IE8. Respond.js can be obtained from https://github.com/scottjehl/Respond -->
-    <script src="/dependencies/js/respond.js"></script>
-
+    <script src="<?php echo get_template_directory_uri(); ?>/dependencies/js/bootstrap.min.js"></script>
 	<?php wp_footer(); ?>
 </body>
 </html>

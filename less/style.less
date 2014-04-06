@@ -13,6 +13,7 @@
 @urbanspoon: #273d88;
 @tripadvisor: #10703f;
 @facebook: #edf0f5;
+@yelp: red;
 
 .rounded-corners (@radius: 5px) {
   -webkit-border-radius: @radius;
@@ -42,7 +43,7 @@ a {
     }
 }
 
-h2, h3, .nav, .btn, .social-media {
+h2, h3, .nav, .btn {
     font-family: @special-font;
     font-weight: 400;
 }
@@ -116,6 +117,7 @@ a:hover .btn {
     padding: 0;
     margin: 0;
     border-bottom: 1pt solid @maroon - #111;
+    display: block;
 
     a {
         float: left;
@@ -257,80 +259,12 @@ a:hover .btn {
     color: @mahogany + #444;
 }
 
-.social-media {
-    min-height: 80px;
-    margin: 0 0 5px 0;
-    padding: 8px 5px;
-    border-radius: 10px;
-    font-size: 1.1em;
-    color: inherit;
-
-    .classy-border(white);
-
-    img {
-        float: left;
-        padding: 2px 20px 2px 5px;
-        max-width: 120px;
-    }
-    span {
-        display: block;
-        margin-left: 90px;
-        margin-top: 5px;
-    }
-    &.urbanspoon, &.urbanspoon:hover {
-        .classy-border(@urbanspoon);
-        color: gold;
-        img {
-            padding-top: 10px;
-        }
-        &:hover {
-            .classy-border(@urbanspoon - #111);
-        }
-    }
-    &.twitter, &.twitter:hover {
-        .classy-border(@twitter);
-        color: white;
-        &:hover {
-            .classy-border(@twitter - #111);
-        }
-    }
-
-    &.facebook, &.facebook:hover {
-        color: #333;
-        .classy-border(@facebook);
-        &:hover {
-            .classy-border(@facebook - #111);
-        }
-    }
-    &.yelp, &.yelp:hover {
-        color: #bf311a;
-        .classy-border(@cream, #222);
-        &:hover {
-            .classy-border(@cream - #111, #222);
-        }
-    }
-    &.tripadvisor, &.tripadvisor:hover {
-        .classy-border(@tripadvisor);
-        color: white;
-        &:hover {
-            .classy-border(@tripadvisor - #111);
-        }
-    }
-    &:hover {
-        text-decoration: none;
-        color: inherit;
-    }
-}
-
 .singleton {
     min-height: 400px;
 }
 
 .footer {
     background-color: @maroon;
-    background-image: url('../img/flower-footer.png');
-    background-position: bottom left;
-    background-repeat: repeat-x;
     color: @cream;
     margin-top: 15px;
     padding: 20px 0;
@@ -351,5 +285,39 @@ a:hover .btn {
 
     .copyright {
         text-shadow: 1px 1px 1px @mahogany;
+    }
+}
+
+.social-media {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    font-size: 1.7em;
+    a {
+        padding: 0;
+        margin: 0;
+        height: 26px;
+        &:hover {
+            color: white;
+            background: @maroon;
+        }
+
+        &.yelp:hover {
+            color: @yelp;
+        }
+        &.twitter:hover {
+            color: @twitter;
+        }
+        &.facebook:hover {
+            color: @facebook;
+        }
+
+        span, img {
+            margin-right: 3px;
+        }
+        img {
+            height: 26px;
+            padding: 0;
+        }
     }
 }

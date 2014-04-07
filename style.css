@@ -13,8 +13,7 @@ a:hover {
 h2,
 h3,
 .nav,
-.btn,
-.social-media {
+.btn {
   font-family: 'Merriweather', Geneva, Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-weight: 400;
 }
@@ -83,6 +82,7 @@ a:hover .btn {
   padding: 0;
   margin: 0;
   border-bottom: 1pt solid #550000;
+  display: block;
 }
 .nav a {
   float: left;
@@ -205,108 +205,11 @@ a:hover .btn {
   font-size: .9em;
   color: #77665d;
 }
-.social-media {
-  min-height: 80px;
-  margin: 0 0 5px 0;
-  padding: 8px 5px;
-  border-radius: 10px;
-  font-size: 1.1em;
-  color: inherit;
-  background-color: #ffffff;
-  border: 1pt solid #eeeeee;
-  border-bottom: 1pt solid #dddddd;
-}
-.social-media img {
-  float: left;
-  padding: 2px 20px 2px 5px;
-  max-width: 120px;
-}
-.social-media span {
-  display: block;
-  margin-left: 90px;
-  margin-top: 5px;
-}
-.social-media.urbanspoon,
-.social-media.urbanspoon:hover {
-  background-color: #273d88;
-  border: 1pt solid #162c77;
-  border-bottom: 1pt solid #051b66;
-  color: gold;
-}
-.social-media.urbanspoon img,
-.social-media.urbanspoon:hover img {
-  padding-top: 10px;
-}
-.social-media.urbanspoon:hover,
-.social-media.urbanspoon:hover:hover {
-  background-color: #162c77;
-  border: 1pt solid #051b66;
-  border-bottom: 1pt solid #000a55;
-}
-.social-media.twitter,
-.social-media.twitter:hover {
-  background-color: #00aced;
-  border: 1pt solid #009bdc;
-  border-bottom: 1pt solid #008acb;
-  color: white;
-}
-.social-media.twitter:hover,
-.social-media.twitter:hover:hover {
-  background-color: #009bdc;
-  border: 1pt solid #008acb;
-  border-bottom: 1pt solid #0079ba;
-}
-.social-media.facebook,
-.social-media.facebook:hover {
-  color: #333;
-  background-color: #edf0f5;
-  border: 1pt solid #dcdfe4;
-  border-bottom: 1pt solid #cbced3;
-}
-.social-media.facebook:hover,
-.social-media.facebook:hover:hover {
-  background-color: #dcdfe4;
-  border: 1pt solid #cbced3;
-  border-bottom: 1pt solid #babdc2;
-}
-.social-media.yelp,
-.social-media.yelp:hover {
-  color: #bf311a;
-  background-color: #ffff92;
-  border: 1pt solid #ffec70;
-  border-bottom: 1pt solid #ffdb5f;
-}
-.social-media.yelp:hover,
-.social-media.yelp:hover:hover {
-  background-color: #fffd81;
-  border: 1pt solid #ffdb5f;
-  border-bottom: 1pt solid #faca4e;
-}
-.social-media.tripadvisor,
-.social-media.tripadvisor:hover {
-  background-color: #10703f;
-  border: 1pt solid #005f2e;
-  border-bottom: 1pt solid #004e1d;
-  color: white;
-}
-.social-media.tripadvisor:hover,
-.social-media.tripadvisor:hover:hover {
-  background-color: #005f2e;
-  border: 1pt solid #004e1d;
-  border-bottom: 1pt solid #003d0c;
-}
-.social-media:hover {
-  text-decoration: none;
-  color: inherit;
-}
 .singleton {
   min-height: 400px;
 }
 .footer {
   background-color: #660000;
-  background-image: url('../img/flower-footer.png');
-  background-position: bottom left;
-  background-repeat: repeat-x;
   color: #ffff92;
   margin-top: 15px;
   padding: 20px 0;
@@ -325,4 +228,36 @@ a:hover .btn {
 }
 .footer .copyright {
   text-shadow: 1px 1px 1px #332219;
+}
+.social-media {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  font-size: 1.7em;
+}
+.social-media a {
+  padding: 0;
+  margin: 0;
+  height: 26px;
+}
+.social-media a:hover {
+  color: white;
+  background: #660000;
+}
+.social-media a.yelp:hover {
+  color: #ff0000;
+}
+.social-media a.twitter:hover {
+  color: #00aced;
+}
+.social-media a.facebook:hover {
+  color: #edf0f5;
+}
+.social-media a span,
+.social-media a img {
+  margin-right: 3px;
+}
+.social-media a img {
+  height: 26px;
+  padding: 0;
 }
